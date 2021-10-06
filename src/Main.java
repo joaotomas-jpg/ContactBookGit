@@ -26,7 +26,7 @@ public class Main {
     public static final String BOOK_EMPTY = "contactBook.Contact book empty.";
     public static final String PHONE_NOT_EXIST = "Phone number does not exist.";
     public static final String SAME_PHONE_NUMBERS = "There are contacts that share phone numbers.";
-    public static final String DIFFERENT_PHONE_NUMBERS = "All contacts have different phone numbers";
+    public static final String DIFFERENT_PHONE_NUMBERS = "All contacts have different phone numbers.";
     public static final String QUIT_MSG = "Goodbye!";
     public static final String COMMAND_ERROR = "Unknown command.";
 
@@ -60,6 +60,7 @@ public class Main {
                     break;
                 case LOOK_UP_CONTACT:
                     getLookUpContact(in, cBook);
+                    break;
                 case CHECK_EQUAL_PHONES:
                     hasSamePhoneNumbers(cBook);
                     break;
