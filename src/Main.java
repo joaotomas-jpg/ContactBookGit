@@ -23,6 +23,7 @@ public class Main {
     public static final String CONTACT_REMOVED = "contactBook.Contact removed.";
     public static final String CONTACT_UPDATED = "contactBook.Contact updated.";
     public static final String BOOK_EMPTY = "contactBook.Contact book empty.";
+    public static final String PHONE_NOT_EXIST = "contact.Book.Phone number does not exist.";
     public static final String QUIT_MSG = "Goodbye!";
     public static final String COMMAND_ERROR = "Unknown command.";
 
@@ -54,6 +55,10 @@ public class Main {
                 case LIST_CONTACTS:
                     listAllContacts(cBook);
                     break;
+                case LOOK_UP_CONTACT:
+                    getLookUpContact(in, cBook);
+                    break;
+
                 default:
                     System.out.println(COMMAND_ERROR);
             }
@@ -153,6 +158,12 @@ public class Main {
     { //teemo
         int phone;
         phone = in.nextInt(); in.nextLine();
+        if(cBook.hasPhoneNumber(phone)){
+            System.out.println(cBook.getName(phone));
+        }
+        else{
+            System.out.println(PHONE_NOT_EXIST);
+        }
 
     }
 }
